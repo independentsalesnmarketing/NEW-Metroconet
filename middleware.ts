@@ -255,13 +255,6 @@ const REDIRECT_MAP: Record<string, string> = {
 }
 
 export function middleware(request: NextRequest) {
-  // Handle domain correction with direct string replacement - much faster
-  const host = request.headers.get("host") || ""
-  if (host.includes("metroconet.com")) {
-    const correctedUrl = request.url.replace("metroconet.com", "metronet.com")
-    return NextResponse.redirect(correctedUrl, 301)
-  }
-
   // Get the path to check against our redirect map
   const pathname = request.nextUrl.pathname
 
