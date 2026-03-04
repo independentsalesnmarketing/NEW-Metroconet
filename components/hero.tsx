@@ -33,7 +33,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-xs sm:text-sm md:text-base text-white/90 mb-8 font-light leading-relaxed">
-              Experience future-ready speeds with up to 2 Gigs of symmetrical fiber internet. Sign up online and get
+              Experience future-ready speeds with up to 5 Gigs of symmetrical fiber internet. Sign up online and get
               your <span className="text-yellow-300 font-semibold">first month FREE</span>
               <span className="text-white font-normal mx-1">+</span>
               <span className="text-yellow-300 font-semibold">NO deposit required</span>
@@ -42,14 +42,14 @@ export default function Hero() {
             {/* CTA Button */}
             <Link href="/plans-pricing" className="block mb-10 w-full sm:w-auto">
               <Button
-                className="group relative overflow-hidden bg-[#964DFF] hover:bg-[#7a3fd0]
-                text-white font-bold py-4 px-8 rounded-xl shadow-[0_0_24px_rgba(150,77,255,0.5)]
-                hover:shadow-[0_0_36px_rgba(150,77,255,0.75)] transform transition-all duration-300
+                className="group relative overflow-hidden bg-[#964DFF] hover:bg-[#00C800]
+                text-white font-bold py-4 px-8 rounded-xl
+                transform transition-all duration-300
                 hover:scale-105 border border-purple-300/20 w-full md:w-auto text-base tracking-wide"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2 text-sm sm:text-base">
                   <span>Claim Your FREE First Month</span>
-                  <span className="text-yellow-300 font-extrabold">&#8594;</span>
+                  <span className="font-extrabold">&#8594;</span>
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-white/10 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               </Button>
