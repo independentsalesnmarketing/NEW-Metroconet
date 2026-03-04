@@ -33,19 +33,6 @@ const promotions = [
     icon: Clock,
     highlight: false,
   },
-  {
-    title: "$100 Visa Gift Card",
-    description:
-      "Switch to Metronet's 1 Gig or 2 Gig plan and receive a $100 Visa gift card after 2 months of high-speed fiber internet service. A special reward for choosing our premium plans.",
-    details:
-      "After maintaining service for 60 days, your $100 Visa gift card will be mailed to your service address. Gift cards typically arrive within 4-6 weeks after the qualification period. Card can be used anywhere Visa is accepted.",
-    eligibility:
-      "New customers subscribing to 1 Gig or 2 Gig plans only. Must maintain service for minimum of 60 days.",
-    expiration: "Offer valid through May 31, 2025",
-    code: "SWITCH100",
-    icon: Gift,
-    highlight: true,
-  },
 ]
 
 // Update testimonials with more specific details for better E-E-A-T
@@ -182,11 +169,9 @@ export default function PromotionsContent() {
         <div className="max-w-4xl mx-auto mb-12 bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-lg border border-gray-700">
           <h2 className="text-xl font-bold mb-3">Current Metronet Promotions: Quick Summary</h2>
           <p className="text-gray-300 leading-relaxed">
-            Metronet currently offers two main promotions for new fiber internet customers: a "First Month Free" deal
-            available on all speed tiers with promo code FIRSTFREE (valid through June 30, 2025), and a "$100 Visa Gift
-            Card" offer for new 1 Gig or 2 Gig subscribers using code SWITCH100 (valid through May 31, 2025). Both
-            promotions require no long-term contract and can be redeemed online or by phone. The gift card promotion
-            requires maintaining service for 60 days to qualify.
+            Metronet currently offers a "First Month Free" promotion for new fiber internet customers available on all
+            speed tiers with promo code FIRSTFREE (valid through June 30, 2025). The promotion requires no long-term
+            contract and can be redeemed online or by phone.
           </p>
           <div className="mt-3 text-sm text-gray-400">Last updated: April 10, 2025</div>
         </div>

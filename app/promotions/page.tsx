@@ -68,7 +68,7 @@ export default function Promotions() {
   const offerSchema = {
     "@context": "https://schema.org",
     "@type": "AggregateOffer",
-    offerCount: "2",
+    offerCount: "1",
     offers: [
       {
         "@type": "Offer",
@@ -84,21 +84,6 @@ export default function Promotions() {
         availability: "LimitedAvailability",
         validFrom: "2025-01-01",
         validThrough: "2025-06-30",
-      },
-      {
-        "@type": "Offer",
-        name: "$100 Visa Gift Card",
-        description:
-          "Switch to Metronet's 1 Gig or 2 Gig plan and receive a $100 Visa gift card after 2 months of service",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "70.00",
-          priceCurrency: "USD",
-        },
-        eligibility: "New customers subscribing to 1 Gig or 2 Gig plans only",
-        availability: "LimitedAvailability",
-        validFrom: "2025-01-01",
-        validThrough: "2025-05-31",
       },
     ],
     itemOffered: {
