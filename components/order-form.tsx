@@ -13,7 +13,6 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { format, addDays, parse, isValid } from "date-fns"
 import { CalendarIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
 
 interface OrderFormProps {
   isOpen: boolean
@@ -280,20 +279,8 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
                       setCalendarOpen(false)
                     }}
                     disabled={(date) => date < today || date > twoWeeksFromNow || date.getDay() === 0}
-                    initialFocus
-                    className="bg-[#2C2C54]"
-                    classNames={{
-                      day: (day) =>
-                        cn(
-                          "text-white hover:bg-[#3D3D6B] focus:bg-[#3D3D6B]",
-                          (day.date < today || day.date > twoWeeksFromNow || day.date.getDay() === 0) &&
-                            "text-gray-500",
-                          day.isSelected && "bg-[#964DFF] text-white hover:bg-[#964DFF] focus:bg-[#964DFF]",
-                        ),
-                      head_cell: "text-white",
-                      nav_button: "text-white hover:bg-[#3D3D6B]",
-                      caption: "text-white",
-                    }}
+                    autoFocus
+                    className="bg-[#2C2C54] text-white [&_.rdp-weekday]:text-white [&_.rdp-month_caption]:text-white [&_.rdp-button_previous]:text-white [&_.rdp-button_next]:text-white [&_.rdp-button_previous:hover]:bg-[#3D3D6B] [&_.rdp-button_next:hover]:bg-[#3D3D6B] [&_.rdp-day>button]:text-white [&_.rdp-day>button:hover]:bg-[#3D3D6B] [&_.rdp-day_disabled>button]:text-gray-500 [&_.rdp-day_disabled>button]:opacity-50 [&_.rdp-selected>button]:bg-[#964DFF] [&_.rdp-selected>button]:text-white [&_.rdp-selected>button:hover]:bg-[#964DFF]"
                   />
                 </PopoverContent>
               </Popover>
