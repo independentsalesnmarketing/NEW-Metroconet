@@ -46,13 +46,16 @@ export default function Hero() {
             {/* Pricing converted to a button with hover effect - now purple */}
             <Link href="/plans-pricing" className="block mb-10 w-full sm:w-auto">
               <Button
-                className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 
-                text-white py-3 sm:py-4 px-4 sm:px-5 rounded-lg shadow-lg transform transition-all duration-300 
-                hover:scale-105 hover:shadow-xl border border-purple-400/30 w-full md:w-auto text-base"
+                className="group relative overflow-hidden bg-[#964DFF] hover:bg-[#7a3fd0]
+                text-white font-bold py-4 px-8 rounded-xl shadow-[0_0_24px_rgba(150,77,255,0.5)]
+                hover:shadow-[0_0_36px_rgba(150,77,255,0.75)] transform transition-all duration-300
+                hover:scale-105 border border-purple-300/20 w-full md:w-auto text-base tracking-wide"
               >
-                <span className="whitespace-normal text-center text-sm sm:text-base">
-                  Switch to Fiber &mdash; Faster Internet Starts Today
+                <span className="relative z-10 flex items-center justify-center gap-2 text-sm sm:text-base">
+                  <span>Claim Your FREE First Month</span>
+                  <span className="text-yellow-300 font-extrabold">&#8594;</span>
                 </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-white/10 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               </Button>
             </Link>
 

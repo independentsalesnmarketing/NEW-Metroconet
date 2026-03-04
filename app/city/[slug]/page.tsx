@@ -807,7 +807,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-2xl mx-auto mb-6">
-                Experience future-ready speeds with up to 5 Gigs of symmetrical fiber internet in {cityName}, {state},
+                Experience future-ready speeds with up to 2 Gigs of symmetrical fiber internet in {cityName}, {state},
                 starting at <span className="font-bold text-[#00C800]">$60/mo</span> with{" "}
                 <span className="font-bold text-[#00C800]">First Month FREE</span>. Perfect for streaming, gaming, and
                 remote work.
@@ -867,7 +867,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                 </h2>
               </div>
               <p className="text-xs sm:text-sm md:text-base text-gray-300 mb-0">
-                Metronet provides 100% fiber internet in {cityName} with symmetrical speeds from 500 Mbps to 5 Gig. All
+                Metronet provides 100% fiber internet in {cityName} with symmetrical speeds from 500 Mbps to 2 Gig. All
                 plans include unlimited data, no contracts, and 24/7 local support. Service is available in{" "}
                 {cityData.networkStats.coverage} of {cityName} with ongoing expansion in{" "}
                 {cityData.networkStats.expansionAreas.join(", ")}.
@@ -887,7 +887,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
               <div className="text-gray-300 text-xs sm:text-sm md:text-base">Fiber</div>
             </div>
             <div className="bg-[#000000] p-3 sm:p-6 rounded-xl text-center shadow-md border border-[#6E6E70]">
-              <div className="text-[#00C800] font-bold text-xl sm:text-3xl md:text-4xl mb-1 sm:mb-2">5 Gig</div>
+                <div className="text-[#00C800] font-bold text-xl sm:text-3xl md:text-4xl mb-1 sm:mb-2">2 Gig</div>
               <div className="text-gray-300 text-xs sm:text-sm md:text-base">Speed</div>
             </div>
             <div className="bg-[#000000] p-3 sm:p-6 rounded-xl text-center shadow-md border border-[#6E6E70]">
@@ -1090,7 +1090,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Blazing Fast Speeds</h4>
                       <p className="text-gray-300">
-                        With plans ranging from 500 Mbps to 5 Gig, we offer the fastest internet speeds available in{" "}
+                        With plans ranging from 500 Mbps to 2 Gig, we offer the fastest internet speeds available in{" "}
                         {cityName}. Our fiber technology ensures you get the same upload and download speeds, with
                         average speeds of {cityData.networkStats.averageSpeed} in real-world testing.
                       </p>
@@ -1416,7 +1416,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                       <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                         <div className="text-gray-300" itemProp="text">
                           <p>
-                            Metronet offers internet speeds from 500 Mbps to 5 Gig (5,000 Mbps) in {cityName}. All plans
+                            Metronet offers internet speeds from 500 Mbps to 2 Gig (2,000 Mbps) in {cityName}. All plans
                             feature symmetrical upload and download speeds, which means you get the same fast
                             performance whether you're downloading movies or uploading video calls.
                           </p>
@@ -1444,13 +1444,12 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                         <div className="text-gray-300" itemProp="text">
                           <p>
                             Metronet plans in {cityName} start at $60/month for 500 Mbps and range up to
-                            $109.95/month for 5 Gig service. Here's a breakdown of our current pricing:
+                            $80/month for 2 Gig service. Here's a breakdown of our current pricing:
                           </p>
                           <ul className="list-disc pl-5 mt-2 space-y-1">
                             <li>500/500 Mbps: $60.00/month</li>
                             <li>1 Gig (1,000 Mbps): $70.00/month</li>
                             <li>2 Gig (2,000 Mbps): $80.00/month</li>
-                            <li>5 Gig (5,000 Mbps): Check availability for pricing</li>
                             <li>Fiber Phone Unlimited: $15.00/month (add-on)</li>
                           </ul>
                           <p className="mt-2">
@@ -1635,14 +1634,14 @@ export default function CityPage({ params }: { params: { slug: string } }) {
 
                     <div className="bg-[#000000] p-4 rounded-lg border border-[#6E6E70]">
                       <div className="flex justify-between items-center mb-2">
-                        <h4 className="font-bold text-lg">5 Gig</h4>
-                        <span className="text-[#00C800] font-bold">$109.95/mo</span>
+                        <h4 className="font-bold text-lg">2 Gig</h4>
+                        <span className="text-[#00C800] font-bold">$80.00/mo</span>
                       </div>
-                      <p className="text-sm text-gray-400 mb-3">Ultimate performance</p>
+                      <p className="text-sm text-gray-400 mb-3">Ultimate home performance</p>
                       <ul className="text-sm space-y-1">
                         <li className="flex items-center">
                           <CheckCircle size={16} className="text-[#00C800] mr-2" />
-                          <span>5000 Mbps download & upload</span>
+                          <span>2000 Mbps download & upload</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle size={16} className="text-[#00C800] mr-2" />

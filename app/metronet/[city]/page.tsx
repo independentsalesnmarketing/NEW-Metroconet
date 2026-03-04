@@ -570,7 +570,7 @@ export default function CityPage({ params }: Props) {
 
             <div className="max-w-3xl">
               <p className="text-sm md:text-base text-white/90 mb-3 leading-relaxed">
-                Enjoy lightning-fast, symmetrical speeds up to 5 Gig—starting at just{" "}
+                Enjoy lightning-fast, symmetrical speeds up to 2 Gig—starting at just{" "}
                 <span className="font-bold text-[#00C800]">$60/month</span>. Plus, get your{" "}
                 <span className="font-bold text-[#00C800]">first month FREE</span> and receive a{" "}
                 <span className="font-bold text-[#00C800]">$100 Visa® Gift Card</span> with select plans.
@@ -982,12 +982,12 @@ export default function CityPage({ params }: Props) {
             {/* Premium Plan */}
             <div className="bg-[#000000] rounded-lg overflow-hidden border border-[#6E6E70] hover:border-[#964DFF] transition-all duration-300">
               <div className="bg-[#212145] p-4">
-                <h3 className="text-xl font-bold text-white">Multi-Gig</h3>
-                <p className="text-[#FFFFFF]">For power users & gamers</p>
+                <h3 className="text-xl font-bold text-white">2 Gig</h3>
+                <p className="text-[#FFFFFF]">Ultimate home performance</p>
               </div>
               <div className="p-6">
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-[#00C800]">$89.95</span>
+                  <span className="text-3xl font-bold text-[#00C800]">$80</span>
                   <span className="text-[#FFFFFF]">/month</span>
                 </div>
                 <ul className="space-y-3 mb-6">
