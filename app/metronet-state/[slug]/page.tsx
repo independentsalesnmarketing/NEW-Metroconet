@@ -66,7 +66,7 @@ export function generateMetadata({ params }: Props): Metadata {
     return {
       title: "Metronet Fiber Internet | First Month FREE + $100 Gift Card",
       description:
-        "Experience lightning-fast fiber internet from Metronet starting at $34.95. Get first month FREE + $100 Visa Gift Card on select plans.",
+        "Experience lightning-fast fiber internet from Metronet starting at $60. Get first month FREE + $100 Visa Gift Card on select plans.",
     }
   }
 
@@ -148,9 +148,9 @@ export default function StatePage({ params }: Props) {
     serviceType: "Fiber Internet",
     offers: {
       "@type": "Offer",
-      price: "34.95",
+      price: "60.00",
       priceCurrency: "USD",
-      description: "Starting at $34.95/month with First Month FREE + $100 Visa Gift Card on select plans",
+      description: "Starting at $60/month with First Month FREE + $100 Visa Gift Card on select plans",
     },
   }
 
@@ -172,7 +172,7 @@ export default function StatePage({ params }: Props) {
         name: `What internet speeds does Metronet offer in ${stateName}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Metronet offers symmetrical fiber internet speeds from 150 Mbps to 5 Gig throughout ${stateName}, with consistent performance across all service areas in the state.`,
+          text: `Metronet offers symmetrical fiber internet speeds from 500 Mbps to 5 Gig throughout ${stateName}, with consistent performance across all service areas in the state.`,
         },
       },
       {
@@ -261,7 +261,7 @@ export default function StatePage({ params }: Props) {
               <p className="text-sm md:text-base text-white/90 mb-3 leading-relaxed">
                 Metronet provides high-speed fiber internet service in {citiesInState.length} cities across {stateName}.
                 Enjoy symmetrical speeds up to 5 Gig—starting at just{" "}
-                <span className="font-bold text-[#00C800]">$34.95/month</span>. Plus, get your{" "}
+                <span className="font-bold text-[#00C800]">$60/month</span>. Plus, get your{" "}
                 <span className="font-bold text-[#00C800]">first month FREE</span> and receive a{" "}
                 <span className="font-bold text-[#00C800]">$100 Visa® Gift Card</span> with select plans.
               </p>
@@ -344,7 +344,7 @@ export default function StatePage({ params }: Props) {
               {citiesInState.length} cities including {stateData.majorMarkets.slice(0, 3).join(", ")}, and more.
               Launched in {stateData.launchYear}, our network now spans over{" "}
               {stateData.totalFiberMiles.toLocaleString()} miles of fiber throughout the state, delivering symmetrical
-              speeds from 150 Mbps to 5 Gbps starting at $34.95/month.
+              speeds from 500 Mbps to 5 Gbps starting at $60/month.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div className="bg-[#000000] p-4 rounded-lg">
@@ -594,18 +594,18 @@ export default function StatePage({ params }: Props) {
             {/* Basic Plan */}
             <div className="bg-[#212145] rounded-lg overflow-hidden border border-[#6E6E70] hover:border-[#964DFF] transition-all duration-300">
               <div className="bg-[#000000] p-4">
-                <h3 className="text-xl font-bold text-white">Basic</h3>
-                <p className="text-[#FFFFFF]">Perfect for light internet users</p>
+                <h3 className="text-xl font-bold text-white">Starter</h3>
+                <p className="text-[#FFFFFF]">Perfect for everyday internet users</p>
               </div>
               <div className="p-6">
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-[#00C800]">$34.95</span>
+                  <span className="text-3xl font-bold text-[#00C800]">$60</span>
                   <span className="text-[#FFFFFF]">/month</span>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center text-[#FFFFFF]">
                     <CheckCircle className="text-[#00C800] mr-2 h-5 w-5 flex-shrink-0" />
-                    <span>150 Mbps symmetrical speeds</span>
+                    <span>500 Mbps symmetrical speeds</span>
                   </li>
                   <li className="flex items-center text-[#FFFFFF]">
                     <CheckCircle className="text-[#00C800] mr-2 h-5 w-5 flex-shrink-0" />
@@ -843,7 +843,7 @@ export default function StatePage({ params }: Props) {
             <div className="bg-[#212145] p-6 rounded-lg border border-[#6E6E70]">
               <h3 className="text-xl font-semibold mb-2">What internet speeds does Metronet offer in {stateName}?</h3>
               <p className="text-[#FFFFFF]">
-                Metronet offers symmetrical fiber internet speeds from 150 Mbps to 5 Gig throughout {stateName}. All
+                Metronet offers symmetrical fiber internet speeds from 500 Mbps to 5 Gig throughout {stateName}. All
                 plans feature the same upload and download speeds, which is ideal for video conferencing, cloud backups,
                 gaming, and streaming. Our network in {stateName} consistently delivers average speeds of{" "}
                 {stateData.averageSpeed} with {stateData.networkReliability} reliability.

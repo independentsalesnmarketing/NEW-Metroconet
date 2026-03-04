@@ -733,7 +733,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
               "@type": "Offer",
               price: "34.95",
               priceCurrency: "USD",
-              description: "Starting at $34.95/month for 150 Mbps symmetrical speeds",
+              description: "Starting at $60/month for 500 Mbps symmetrical speeds",
             },
             aggregateRating: {
               "@type": "AggregateRating",
@@ -867,7 +867,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                 </h2>
               </div>
               <p className="text-xs sm:text-sm md:text-base text-gray-300 mb-0">
-                Metronet provides 100% fiber internet in {cityName} with symmetrical speeds from 150 Mbps to 5 Gig. All
+                Metronet provides 100% fiber internet in {cityName} with symmetrical speeds from 500 Mbps to 5 Gig. All
                 plans include unlimited data, no contracts, and 24/7 local support. Service is available in{" "}
                 {cityData.networkStats.coverage} of {cityName} with ongoing expansion in{" "}
                 {cityData.networkStats.expansionAreas.join(", ")}.
@@ -1090,7 +1090,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Blazing Fast Speeds</h4>
                       <p className="text-gray-300">
-                        With plans ranging from 150 Mbps to 5 Gig, we offer the fastest internet speeds available in{" "}
+                        With plans ranging from 500 Mbps to 5 Gig, we offer the fastest internet speeds available in{" "}
                         {cityName}. Our fiber technology ensures you get the same upload and download speeds, with
                         average speeds of {cityData.networkStats.averageSpeed} in real-world testing.
                       </p>
@@ -1416,7 +1416,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                       <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                         <div className="text-gray-300" itemProp="text">
                           <p>
-                            Metronet offers internet speeds from 150 Mbps to 5 Gig (5,000 Mbps) in {cityName}. All plans
+                            Metronet offers internet speeds from 500 Mbps to 5 Gig (5,000 Mbps) in {cityName}. All plans
                             feature symmetrical upload and download speeds, which means you get the same fast
                             performance whether you're downloading movies or uploading video calls.
                           </p>
@@ -1429,7 +1429,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                           </p>
                           <p className="mt-2">
                             For context, streaming 4K video requires about 25 Mbps, while video conferencing needs 3-5
-                            Mbps. Even our basic 150 Mbps plan can easily handle multiple simultaneous high-bandwidth
+                            Mbps. Even our entry-level 500 Mbps plan can easily handle multiple simultaneous high-bandwidth
                             activities.
                           </p>
                         </div>
@@ -1443,15 +1443,14 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                       <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                         <div className="text-gray-300" itemProp="text">
                           <p>
-                            Metronet plans in {cityName} start at $34.95/month for 150 Mbps and range up to
+                            Metronet plans in {cityName} start at $60/month for 500 Mbps and range up to
                             $109.95/month for 5 Gig service. Here's a breakdown of our current pricing:
                           </p>
                           <ul className="list-disc pl-5 mt-2 space-y-1">
-                            <li>150/150 Mbps: $34.95/month</li>
-                            <li>500/500 Mbps: $44.95/month</li>
-                            <li>1 Gig (1,000 Mbps): $49.95/month</li>
-                            <li>2 Gig (2,000 Mbps): $89.95/month</li>
-                            <li>5 Gig (5,000 Mbps): $109.95/month</li>
+                            <li>500/500 Mbps: $60.00/month</li>
+                            <li>1 Gig (1,000 Mbps): $70.00/month</li>
+                            <li>2 Gig (2,000 Mbps): $80.00/month</li>
+                            <li>5 Gig (5,000 Mbps): Check availability for pricing</li>
                             <li>Fiber Phone Unlimited: $15.00/month (add-on)</li>
                           </ul>
                           <p className="mt-2">
@@ -1588,14 +1587,14 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                   <div className="space-y-4 mb-6">
                     <div className="bg-[#000000] p-4 rounded-lg border border-[#6E6E70]">
                       <div className="flex justify-between items-center mb-2">
-                        <h4 className="font-bold text-lg">150/150 Mbps</h4>
-                        <span className="text-[#00C800] font-bold">$34.95/mo</span>
+                        <h4 className="font-bold text-lg">500/500 Mbps</h4>
+                        <span className="text-[#00C800] font-bold">$60.00/mo</span>
                       </div>
-                      <p className="text-sm text-gray-400 mb-3">Perfect for small households</p>
+                      <p className="text-sm text-gray-400 mb-3">Perfect for everyday households</p>
                       <ul className="text-sm space-y-1">
                         <li className="flex items-center">
                           <CheckCircle size={16} className="text-[#00C800] mr-2" />
-                          <span>150 Mbps download & upload</span>
+                          <span>500 Mbps download & upload</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle size={16} className="text-[#00C800] mr-2" />

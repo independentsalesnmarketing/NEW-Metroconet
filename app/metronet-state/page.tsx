@@ -103,7 +103,7 @@ export default function ServiceAreasPage() {
         name: "What internet speeds does Metronet offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Metronet offers symmetrical fiber internet speeds from 150 Mbps to 5 Gig across all our service areas. All plans feature the same upload and download speeds, which is ideal for video conferencing, cloud backups, gaming, and streaming.",
+          text: "Metronet offers symmetrical fiber internet speeds from 500 Mbps to 5 Gig across all our service areas. All plans feature the same upload and download speeds, which is ideal for video conferencing, cloud backups, gaming, and streaming.",
         },
       },
       {
@@ -263,7 +263,7 @@ export default function ServiceAreasPage() {
             <h2 className="text-2xl font-bold mb-4">Metronet Fiber Internet Coverage Overview</h2>
             <p className="text-[#FFFFFF] mb-4">
               Metronet currently offers 100% fiber internet service across {stateNames.length} states, with availability
-              in {totalCities} cities and growing. Our fiber network delivers symmetrical speeds from 150 Mbps to 5 Gbps
+              in {totalCities} cities and growing. Our fiber network delivers symmetrical speeds from 500 Mbps to 5 Gbps
               with 99.9% reliability, ensuring consistent performance for homes and businesses in our service areas.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
@@ -623,7 +623,7 @@ export default function ServiceAreasPage() {
             <div className="bg-[#000000] p-6 rounded-lg border border-[#6E6E70]">
               <h3 className="text-xl font-semibold mb-2">What internet speeds does Metronet offer?</h3>
               <p className="text-[#FFFFFF]">
-                Metronet offers symmetrical fiber internet speeds from 150 Mbps to 5 Gig across all our service areas.
+                Metronet offers symmetrical fiber internet speeds from 500 Mbps to 5 Gig across all our service areas.
                 All plans feature the same upload and download speeds, which is ideal for video conferencing, cloud
                 backups, gaming, and streaming. Visit our{" "}
                 <Link href="/plans-pricing" className="text-[#964DFF] hover:underline">
