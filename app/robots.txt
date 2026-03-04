@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Allow all bots to crawl city pages
+Allow: /metronet-in-*
+
+# Point to our sitemaps
+Sitemap: https://metroconet.com/sitemap.xml
+Sitemap: https://metroconet.com/api/sitemap
