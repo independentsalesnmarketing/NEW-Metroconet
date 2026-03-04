@@ -27,19 +27,19 @@ export async function POST(req: NextRequest) {
       isAvailable
         ? `<plans>
       <plan>
-        <name>Internet 100</name>
-        <speed>100 Mbps</speed>
-        <price>49.95</price>
-      </plan>
-      <plan>
         <name>Internet 500</name>
         <speed>500 Mbps</speed>
-        <price>59.95</price>
+        <price>60.00</price>
       </plan>
       <plan>
         <name>Internet 1 Gig</name>
         <speed>1000 Mbps</speed>
-        <price>69.95</price>
+        <price>70.00</price>
+      </plan>
+      <plan>
+        <name>Internet 2 Gig</name>
+        <speed>2000 Mbps</speed>
+        <price>80.00</price>
       </plan>
     </plans>`
         : ""

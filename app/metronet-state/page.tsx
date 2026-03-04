@@ -71,9 +71,9 @@ export default function ServiceAreasPage() {
     serviceType: "Fiber Internet",
     offers: {
       "@type": "Offer",
-      price: "34.95",
+      price: "60.00",
       priceCurrency: "USD",
-      description: "Starting at $34.95/month with First Month FREE + $100 Visa Gift Card on select plans",
+      description: "Starting at $60/month with First Month FREE + $100 Visa Gift Card on select plans",
     },
   }
 
@@ -187,7 +187,7 @@ export default function ServiceAreasPage() {
               <p className="text-sm md:text-base text-white/90 mb-6 leading-relaxed">
                 Metronet provides high-speed fiber internet service across {stateNames.length} states and growing. Enjoy
                 symmetrical speeds up to 5 Gig—starting at just{" "}
-                <span className="font-bold text-[#00C800]">$34.95/month</span>. Plus, get your{" "}
+                <span className="font-bold text-[#00C800]">$60/month</span>. Plus, get your{" "}
                 <span className="font-bold text-[#00C800]">first month FREE</span> and receive a{" "}
                 <span className="font-bold text-[#00C800]">$100 Visa® Gift Card</span> with select plans.
               </p>

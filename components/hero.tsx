@@ -51,7 +51,7 @@ export default function Hero() {
                 hover:scale-105 hover:shadow-xl border border-purple-400/30 w-full md:w-auto text-base"
               >
                 <span className="whitespace-normal text-center text-sm sm:text-base">
-                  Get Blazing-Fast Fiber &mdash; Plans from <span className="font-bold mx-1">$60</span>/mo
+                  Switch to Fiber &mdash; Faster Internet Starts Today
                 </span>
               </Button>
             </Link>

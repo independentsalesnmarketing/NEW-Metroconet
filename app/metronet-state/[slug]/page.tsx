@@ -633,7 +633,7 @@ export default function StatePage({ params }: Props) {
               </div>
               <div className="p-6">
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-[#00C800]">$49.95</span>
+                  <span className="text-3xl font-bold text-[#00C800]">$70</span>
                   <span className="text-[#FFFFFF]">/month</span>
                 </div>
                 <ul className="space-y-3 mb-6">

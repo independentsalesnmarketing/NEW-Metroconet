@@ -81,7 +81,7 @@ const getCitySpecificData = (cityName: string, state: string) => {
         {
           name: "Dayton Business Bundle",
           description:
-            "Special pricing for Dayton Chamber of Commerce members - 1 Gig service for $44.95/month plus first month free and $100 Visa gift card",
+            "Special pricing for Dayton Chamber of Commerce members - 1 Gig service for $70/month plus first month free and $100 Visa gift card",
         },
       ],
       localNews: [
@@ -731,7 +731,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
             serviceType: "Fiber Internet",
             offers: {
               "@type": "Offer",
-              price: "34.95",
+              price: "60.00",
               priceCurrency: "USD",
               description: "Starting at $60/month for 500 Mbps symmetrical speeds",
             },
@@ -808,7 +808,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
 
               <p className="text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-2xl mx-auto mb-6">
                 Experience future-ready speeds with up to 5 Gigs of symmetrical fiber internet in {cityName}, {state},
-                starting at <span className="font-bold text-[#00C800]">$34.95/mo</span> with{" "}
+                starting at <span className="font-bold text-[#00C800]">$60/mo</span> with{" "}
                 <span className="font-bold text-[#00C800]">First Month FREE</span>. Perfect for streaming, gaming, and
                 remote work.
               </p>
@@ -1610,7 +1610,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                     <div className="bg-[#000000] p-4 rounded-lg border-2 border-[#964DFF]">
                       <div className="flex justify-between items-center mb-2">
                         <h4 className="font-bold text-lg">1 Gig</h4>
-                        <span className="text-[#00C800] font-bold">$49.95/mo</span>
+                        <span className="text-[#00C800] font-bold">$70/mo</span>
                       </div>
                       <p className="text-sm text-gray-400 mb-3">Most popular plan</p>
                       <ul className="text-sm space-y-1">
