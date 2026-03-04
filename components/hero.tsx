@@ -2,12 +2,9 @@
 import { CheckCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
-  const isMobile = useIsMobile()
-
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-8 sm:pt-0">
       {/* Background Image */}
@@ -17,8 +14,7 @@ export default function Hero() {
           alt="Family enjoying high-speed Metronet fiber internet at home"
           fill
           priority
-          className="object-cover"
-          style={{ objectPosition: isMobile ? "70% center" : "center" }}
+          className="object-cover object-[70%_center] sm:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-transparent"></div>
       </div>
@@ -27,7 +23,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pt-12 sm:pt-8 mt-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 text-left">
-            {/* Updated headline with improved typography */}
+            {/* Headline */}
             <h1 className="text-6xl sm:text-7xl font-extrabold text-white leading-tight tracking-tight mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                 Metronet
@@ -35,15 +31,15 @@ export default function Hero() {
               <span className="font-light">Fiber</span>
             </h1>
 
-            {/* Updated subheadline with smaller text on mobile */}
+            {/* Subheadline */}
             <p className="text-xs sm:text-sm md:text-base text-white/90 mb-8 font-light leading-relaxed">
-              Experience future-ready speeds with up to 5 Gigs of symmetrical fiber internet. Sign up online and get
+              Experience future-ready speeds with up to 2 Gigs of symmetrical fiber internet. Sign up online and get
               your <span className="text-yellow-300 font-semibold">first month FREE</span>
               <span className="text-white font-normal mx-1">+</span>
               <span className="text-yellow-300 font-semibold">NO deposit required</span>
             </p>
 
-            {/* Pricing converted to a button with hover effect - now purple */}
+            {/* CTA Button */}
             <Link href="/plans-pricing" className="block mb-10 w-full sm:w-auto">
               <Button
                 className="group relative overflow-hidden bg-[#964DFF] hover:bg-[#7a3fd0]
