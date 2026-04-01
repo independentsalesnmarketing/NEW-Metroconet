@@ -3,7 +3,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "test:app-script": "node scripts/test-app-script.mjs"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

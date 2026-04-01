@@ -104,7 +104,7 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
     try {
       console.log("Sending data:", dataToSend)
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwZxDoGu4F_uK9Fq1AKyG8PspEb6nVvV829kswbwjeVDY2Q2VdvIKstZH8PBtfKi7Guag/exec",
+        "https://script.google.com/macros/s/AKfycbyEDuABskCLlnb554hFpqGavcotJ5Jcl7ivHf6-MNCeJ2Tq82VDDFpC1v_LKmyF2Sgg8w/exec",
         {
           method: "POST",
           mode: "no-cors",
