@@ -213,7 +213,7 @@ function InlineContactForm({ zipCode }: { zipCode: string }) {
         timestamp: formatTimestamp(new Date()),
       }
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyEDuABskCLlnb554hFpqGavcotJ5Jcl7ivHf6-MNCeJ2Tq82VDDFpC1v_LKmyF2Sgg8w/exec",
+        "https://script.google.com/macros/s/AKfycbxyxQKGQFTqdvHMmNcFzCSxUVIrrzfwoOgEMpShxrDdmfTeoFFHFB-N0gKC-G2lVCnh/exec",
         {
           method: "POST",
           mode: "no-cors",

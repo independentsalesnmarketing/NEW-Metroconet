@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState, useCallback } from "react"
+import { Loader2 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -11,7 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { format, addDays, parse, isValid } from "date-fns"
+import { format, addDays, parse, isValid, startOfDay } from "date-fns"
 import { CalendarIcon } from "lucide-react"
 
 interface OrderFormProps {
@@ -25,6 +26,7 @@ interface OrderFormProps {
 
 export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormProps) {
   const [confirmationMessage, setConfirmationMessage] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [addPhoneService, setAddPhoneService] = useState(false)
   const [installDate, setInstallDate] = useState<Date>()
   const [calendarOpen, setCalendarOpen] = useState(false)
@@ -101,10 +103,11 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
       addPhoneService: addPhoneService ? "Yes" : "No",
     }
 
+    setIsSubmitting(true)
     try {
       console.log("Sending data:", dataToSend)
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyEDuABskCLlnb554hFpqGavcotJ5Jcl7ivHf6-MNCeJ2Tq82VDDFpC1v_LKmyF2Sgg8w/exec",
+        "https://script.google.com/macros/s/AKfycbxyxQKGQFTqdvHMmNcFzCSxUVIrrzfwoOgEMpShxrDdmfTeoFFHFB-N0gKC-G2lVCnh/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -140,13 +143,16 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
       setConfirmationMessage(
         "There was an error submitting your order. Please try again or contact customer support at 1-877-407-3224.",
       )
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
   if (!isOpen) return null
 
   const today = new Date()
-  const twoWeeksFromNow = addDays(today, 14)
+  const minInstallDate = startOfDay(addDays(today, 2))
+  const maxInstallDate = startOfDay(addDays(today, 14))
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -162,7 +168,7 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
             </Button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5">
             <div>
               <Label htmlFor="firstName" className="text-white">
                 First Name
@@ -264,7 +270,7 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
                 <PopoverTrigger asChild>
                   <Button
                     variant={"outline"}
-                    className={`w-full justify-start text-left font-normal bg-[#2C2C54] text-white border-[#6E6E70] hover:bg-[#3D3D6B] ${!installDate && "text-muted-foreground"}`}
+                    className={`w-full justify-start text-left font-normal bg-[#2C2C54] text-white border-[#6E6E70] hover:bg-[#3D3D6B] hover:text-white ${!installDate && "text-muted-foreground"}`}
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
                     {installDate ? format(installDate, "PPP") : <span>Pick a date</span>}
@@ -278,9 +284,9 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
                       setInstallDate(date)
                       setCalendarOpen(false)
                     }}
-                    disabled={(date) => date < today || date > twoWeeksFromNow || date.getDay() === 0}
+                    disabled={(date) => date < minInstallDate || date > maxInstallDate}
                     autoFocus
-                    className="bg-[#2C2C54] text-white [&_.rdp-weekday]:text-white [&_.rdp-month_caption]:text-white [&_.rdp-button_previous]:text-white [&_.rdp-button_next]:text-white [&_.rdp-button_previous:hover]:bg-[#3D3D6B] [&_.rdp-button_next:hover]:bg-[#3D3D6B] [&_.rdp-day>button]:text-white [&_.rdp-day>button:hover]:bg-[#3D3D6B] [&_.rdp-day_disabled>button]:text-gray-500 [&_.rdp-day_disabled>button]:opacity-50 [&_.rdp-selected>button]:bg-[#964DFF] [&_.rdp-selected>button]:text-white [&_.rdp-selected>button:hover]:bg-[#964DFF]"
+                    className="bg-[#2C2C54] text-white [&_.rdp-weekday]:text-white [&_.rdp-month_caption]:text-white [&_.rdp-button_previous]:text-white [&_.rdp-button_next]:text-white [&_.rdp-button_previous:hover]:bg-[#3D3D6B] [&_.rdp-button_previous:hover]:text-white [&_.rdp-button_next:hover]:bg-[#3D3D6B] [&_.rdp-button_next:hover]:text-white [&_.rdp-day>button]:text-white [&_.rdp-day>button:hover]:bg-[#3D3D6B] [&_.rdp-day>button:hover]:text-white [&_.rdp-day_disabled>button]:text-gray-500 [&_.rdp-day_disabled>button]:opacity-50 [&_.rdp-selected>button]:bg-[#964DFF] [&_.rdp-selected>button]:text-white [&_.rdp-selected>button:hover]:bg-[#964DFF] [&_.rdp-selected>button:hover]:text-white"
                   />
                 </PopoverContent>
               </Popover>
@@ -297,13 +303,13 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
                   <SelectValue placeholder="Select a time" />
                 </SelectTrigger>
                 <SelectContent className="bg-[#2C2C54] text-white border-[#6E6E70]">
-                  <SelectItem value="8am-11am" className="hover:bg-[#3D3D6B] focus:bg-[#3D3D6B]">
+                  <SelectItem value="8am-11am" className="hover:bg-[#3D3D6B] hover:text-white focus:bg-[#3D3D6B] focus:text-white data-[highlighted]:bg-[#3D3D6B] data-[highlighted]:text-white">
                     8am - 11am
                   </SelectItem>
-                  <SelectItem value="11am-2pm" className="hover:bg-[#3D3D6B] focus:bg-[#3D3D6B]">
+                  <SelectItem value="11am-2pm" className="hover:bg-[#3D3D6B] hover:text-white focus:bg-[#3D3D6B] focus:text-white data-[highlighted]:bg-[#3D3D6B] data-[highlighted]:text-white">
                     11am - 2pm
                   </SelectItem>
-                  <SelectItem value="2pm-5pm" className="hover:bg-[#3D3D6B] focus:bg-[#3D3D6B]">
+                  <SelectItem value="2pm-5pm" className="hover:bg-[#3D3D6B] hover:text-white focus:bg-[#3D3D6B] focus:text-white data-[highlighted]:bg-[#3D3D6B] data-[highlighted]:text-white">
                     2pm - 5pm
                   </SelectItem>
                 </SelectContent>
@@ -321,7 +327,7 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
                 onChange={(e) => setFormData((prev) => ({ ...prev, promoCode: e.target.value }))}
               />
             </div>
-            <div className="col-span-2 flex items-center space-x-2">
+            <div className="col-span-2 !flex-row items-center justify-start gap-2">
               <Checkbox
                 id="addPhoneService"
                 checked={addPhoneService}
@@ -332,8 +338,10 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
                 Add phone service for $15/month
               </Label>
             </div>
-            <Button type="submit" className="col-span-2 w-full bg-[#964DFF] hover:bg-[#00A89C]">
-              Submit Order
+            <Button type="submit" className="col-span-2 w-full bg-[#964DFF] hover:bg-[#00A89C]" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Submitting...</>
+              ) : "Submit Order"}
             </Button>
           </form>
         )}

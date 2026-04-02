@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import { Loader2 } from "lucide-react"
 import type React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -7,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export default function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,6 +25,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
     try {
       const dataToSend = {
         ...formData,
@@ -38,7 +41,7 @@ export default function ContactForm() {
       }
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyEDuABskCLlnb554hFpqGavcotJ5Jcl7ivHf6-MNCeJ2Tq82VDDFpC1v_LKmyF2Sgg8w/exec",
+        "https://script.google.com/macros/s/AKfycbxyxQKGQFTqdvHMmNcFzCSxUVIrrzfwoOgEMpShxrDdmfTeoFFHFB-N0gKC-G2lVCnh/exec",
         {
           method: "POST",
           body: JSON.stringify(dataToSend),
@@ -59,6 +62,8 @@ export default function ContactForm() {
     } catch (error) {
       console.error("There was an error submitting the form", error)
       alert("There was an error submitting your form. Please try again or call us directly at 1-877-407-3224.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -120,8 +125,10 @@ export default function ContactForm() {
           className="bg-[#2C2C54] text-white border-[#6E6E70]"
         />
       </div>
-      <Button type="submit" className="w-full bg-[#964DFF] hover:bg-[#00A89C]">
-        Submit
+      <Button type="submit" className="w-full bg-[#964DFF] hover:bg-[#00A89C]" disabled={isSubmitting}>
+        {isSubmitting ? (
+          <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Submitting...</>
+        ) : "Submit"}
       </Button>
     </form>
   )
