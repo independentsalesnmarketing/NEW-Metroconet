@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useRef, useEffect } from "react"
 import { Loader2 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -24,6 +24,39 @@ interface OrderFormProps {
   } | null
 }
 
+async function resolveIpGeoLocation(): Promise<string> {
+  const apis: { url: string; parse: (j: Record<string, string>) => string }[] = [
+    {
+      url: "https://ipwho.is/?fields=success,city,region",
+      parse: (j) => [j.city, j.region].filter(Boolean).join(", "),
+    },
+    {
+      url: "https://ipapi.co/json/",
+      parse: (j) => [j.city, j.region].filter(Boolean).join(", "),
+    },
+    {
+      url: "https://get.geojs.io/v1/ip/geo.json",
+      parse: (j) => [j.city, j.region].filter(Boolean).join(", "),
+    },
+  ]
+  for (const api of apis) {
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 3500)
+    try {
+      const res = await fetch(api.url, { signal: controller.signal })
+      if (!res.ok) continue
+      const json = await res.json()
+      const location = api.parse(json)
+      if (location) return location
+    } catch {
+      // try next
+    } finally {
+      clearTimeout(timeout)
+    }
+  }
+  return ""
+}
+
 export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormProps) {
   const [confirmationMessage, setConfirmationMessage] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -42,6 +75,12 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
     promoCode: "",
   })
   const [errors, setErrors] = useState<{ [key: string]: string }>({})
+  const ipGeoPromiseRef = useRef<Promise<string> | null>(null)
+
+  useEffect(() => {
+    if (!isOpen) return
+    ipGeoPromiseRef.current = resolveIpGeoLocation()
+  }, [isOpen])
 
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {}
@@ -101,13 +140,22 @@ export default function OrderForm({ isOpen, onClose, selectedPlan }: OrderFormPr
       preferredInstallTime: formProps.preferredInstallTime,
       promoCode: formProps.promoCode || "None",
       addPhoneService: addPhoneService ? "Yes" : "No",
+      geoLocation: "",
+    }
+
+    // Wait up to 3 s for the in-flight geo lookup started when the modal opened
+    if (ipGeoPromiseRef.current) {
+      dataToSend.geoLocation = await Promise.race<string>([
+        ipGeoPromiseRef.current,
+        new Promise<string>((r) => setTimeout(() => r(""), 3000)),
+      ])
     }
 
     setIsSubmitting(true)
     try {
       console.log("Sending data:", dataToSend)
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbx3nQb_kQYEvJD2Df3QnzK5PGDHYlYsX8tOTqdff8z1882-t8EOO4b5J2Ny6o6vGzyUnA/exec",
+        "https://script.google.com/macros/s/AKfycbxWQ8o9Dbj5ngI7dxqSIggFOHSJbPydOTVKTejX_rBXkWWvk9Qy9ay4StRS7Mn3yzSlkA/exec",
         {
           method: "POST",
           mode: "no-cors",
