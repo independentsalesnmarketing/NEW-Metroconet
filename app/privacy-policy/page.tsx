@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Privacy Policy | Metronet Fiber Internet",
   description:
-    "Learn how Metronet protects your privacy while providing fiber internet services starting at $60. Our privacy policy covers how we handle your information while offering first month FREE + $100 Visa Gift Card on select plans.",
+    "Learn how Metronet protects your privacy while providing fiber internet services starting at $60. Our privacy policy covers how we handle your information as part of our fiber internet service.",
 }
 
 export default function PrivacyPolicy() {

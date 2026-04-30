@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Terms & Conditions | Metronet Fiber Internet",
   description:
-    "Review Metronet's terms and conditions for our fiber internet services starting at $60. Learn about our first month FREE + $100 Visa Gift Card promotions on select plans and service agreements.",
+    "Review Metronet's terms and conditions for our fiber internet services starting at $60. Learn about our free installation offer, unlimited data, and service agreements.",
 }
 
 export default function TermsAndConditions() {

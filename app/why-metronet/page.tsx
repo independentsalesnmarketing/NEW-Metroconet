@@ -6,11 +6,11 @@ import { ReasonsSection, MetronetDifferenceSection, AdditionalBenefitsSection } 
 
 // Update the metadata section to include the promotional information
 export const metadata: Metadata = {
-  title: "Why Choose Metronet | First Month FREE + $100 Gift Card",
+  title: "Why Choose Metronet | Free Installation | Unlimited Data | No Contracts",
   description:
-    "See why Metronet is the top choice for fiber internet starting at $60. Get first month FREE + $100 Visa Gift Card on select plans. Enjoy 99.9% reliability, symmetrical speeds up to 5 Gbps, and 24/7 local support. Experience the fiber difference today!",
+    "See why Metronet is the top choice for fiber internet starting at $60. Free installation, unlimited data, no deposit required, and no contracts. Enjoy 99.9% reliability, symmetrical speeds up to 5 Gbps, and 24/7 local support.",
   keywords:
-    "why choose Metronet, fiber internet benefits, Metronet vs cable, best internet provider, fiber optic internet, symmetrical speeds, no data caps, reliable internet service, first month free, $100 gift card",
+    "why choose Metronet, fiber internet benefits, Metronet vs cable, best internet provider, fiber optic internet, symmetrical speeds, no data caps, reliable internet service, no deposit, free installation, unlimited data",
 }
 
 // Update the additionalBenefits array to include more detailed information

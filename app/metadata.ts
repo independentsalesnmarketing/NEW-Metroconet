@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Metronet: Lightning-Fast Fiber Internet | First Month FREE + $100 Gift Card",
+    title: "Metronet: Lightning-Fast Fiber Internet | Free Installation | Unlimited Data",
     description:
-      "Experience blazing-fast internet speeds starting at $60 with Metronet's fiber network. Get first month FREE + $100 Visa Gift Card on select plans. Unlimited data, no contracts, and exceptional reliability.",
+      "Experience blazing-fast internet speeds starting at $60 with Metronet's fiber network. Free installation, unlimited data, and no deposit required. No contracts and exceptional reliability.",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design_a_highly_engaging_open_graph_image_for_a_residential_fiber_internet_website_the_visual_shoul_s7db6k27cs08k4km7wrd_0-jFn2UH07Q2j1zPuM9YqDZZ5cimBuqd.png",
     ],

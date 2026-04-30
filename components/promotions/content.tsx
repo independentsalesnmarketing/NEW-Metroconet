@@ -22,16 +22,16 @@ import {
 // Update the promotions array to include more detailed information and better structure
 const promotions = [
   {
-    title: "First Month Free",
+    title: "Free Installation",
     description:
-      "Sign up for any Metronet fiber internet plan and get your first month of service absolutely free! Perfect for new customers who want to experience the power of fiber internet with no initial cost.",
+      "Get professional fiber internet installation at no cost. Our certified technicians will come to your home and set everything up — you pay nothing for the installation service.",
     details:
-      "This limited-time offer applies to all new residential customers signing up for any speed tier. The promotion automatically applies to your first bill, with regular pricing resuming in month two. No long-term contract required to take advantage of this offer.",
-    eligibility: "New residential customers only. Cannot be combined with other promotional offers except where noted.",
-    expiration: "Offer valid through June 30, 2025",
-    code: "FIRSTFREE",
-    icon: Clock,
-    highlight: false,
+      "Free standard residential installation is included for all new Metronet customers. Installation typically takes 2–3 hours. Our technicians handle everything from running the fiber to your home to setting up your eero router.",
+    eligibility: "New residential customers only.",
+    expiration: "Available while current pricing is in effect",
+    code: "FREEINSTALL",
+    icon: Gift,
+    highlight: true,
   },
 ]
 
@@ -39,7 +39,7 @@ const promotions = [
 const testimonials = [
   {
     quote:
-      "I switched to Metronet using their gift card promotion after struggling with my cable provider's inconsistent speeds for years. The $100 gift card was a nice bonus, but the real value is the consistent 940Mbps download AND upload speeds I'm getting. My work video calls are crystal clear now, and I can upload large design files in seconds instead of minutes.",
+      "I switched to Metronet after struggling with my cable provider's inconsistent speeds for years. The real value is the consistent 940Mbps download AND upload speeds I'm getting. My work video calls are crystal clear now, and I can upload large design files in seconds instead of minutes.",
     author: "Sarah K.",
     occupation: "Graphic Designer",
     location: "Indianapolis, IN",
@@ -48,7 +48,7 @@ const testimonials = [
   },
   {
     quote:
-      "The first month free promotion gave me a chance to try Metronet without risk. I was skeptical about switching from cable, but after experiencing the difference in gaming performance with ping times under 15ms, I was sold. My whole family can stream 4K content simultaneously without any buffering, even during peak hours.",
+      "The free installation made it easy to try Metronet without risk. I was skeptical about switching from cable, but after experiencing the difference in gaming performance with ping times under 15ms, I was sold. My whole family can stream 4K content simultaneously without any buffering, even during peak hours.",
     author: "Michael T.",
     occupation: "Software Engineer",
     location: "Lexington, KY",
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: "Can I combine multiple promotions?",
     answer:
-      "Generally, Metronet promotions cannot be combined unless explicitly stated in the offer terms. Each promotion is designed to provide significant value on its own. In some cases, certain promotions may be stackable with specific service add-ons or equipment offers. For example, while you cannot combine the 'First Month Free' and '$100 Gift Card' promotions, you might be able to combine either with a WiFi equipment promotion. For the most current information about combining specific offers, please contact our customer service team at 1-877-407-3224.",
+      "Generally, Metronet promotions cannot be combined unless explicitly stated in the offer terms. Each promotion is designed to provide significant value on its own. For the most current information about combining specific offers, please contact our customer service team at 1-877-407-3224.",
   },
   {
     question: "How long do promotions typically last?",
@@ -169,11 +169,9 @@ export default function PromotionsContent() {
         <div className="max-w-4xl mx-auto mb-12 bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-lg border border-gray-700">
           <h2 className="text-xl font-bold mb-3">Current Metronet Promotions: Quick Summary</h2>
           <p className="text-gray-300 leading-relaxed">
-            Metronet currently offers a "First Month Free" promotion for new fiber internet customers available on all
-            speed tiers with promo code FIRSTFREE (valid through June 30, 2025). The promotion requires no long-term
-            contract and can be redeemed online or by phone.
+    Metronet currently offers <strong>free installation</strong> for new fiber internet customers on all speed tiers. All plans also include <strong>unlimited data</strong> and require <strong>no deposit</strong> — $0 due at signup. Service can be activated online or by phone.
           </p>
-          <div className="mt-3 text-sm text-gray-400">Last updated: April 10, 2025</div>
+          <div className="mt-3 text-sm text-gray-400">Last updated: April 30, 2026</div>
         </div>
 
         <div className="max-w-4xl mx-auto mb-16" id="current-promotions">
@@ -325,7 +323,7 @@ export default function PromotionsContent() {
               </h3>
               <p className="text-gray-300">
                 Our promotions are designed to give you the best possible value for high-speed fiber internet. With
-                offers like first month free and gift card rewards, you'll get more bang for your buck with Metronet.
+                offers like $0 due at signup, free installation, and unlimited data, you'll get more bang for your buck with Metronet.
                 Unlike cable providers who often advertise low introductory rates that increase dramatically after a few
                 months, our promotional offers provide genuine value without hidden catches.
               </p>

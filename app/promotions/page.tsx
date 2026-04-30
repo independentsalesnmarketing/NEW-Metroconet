@@ -4,11 +4,11 @@ import Script from "next/script"
 import { GoogleAnalytics } from "@/components/google-analytics"
 
 export const metadata: Metadata = {
-  title: "Exclusive Metronet Deals | First Month FREE + $100 Gift Card",
+  title: "Exclusive Metronet Deals | Free Installation on All Plans",
   description:
-    "Grab Metronet's hot deals: First month FREE + $100 Visa Gift Card on select plans! Plans starting at $60. Don't miss these limited-time offers on blazing-fast fiber internet. Act now!",
+    "Metronet's current offer: free installation on all plans starting at $60. No deposit required and unlimited data included. Sign up today for blazing-fast fiber internet!",
   keywords:
-    "Metronet promotions, fiber internet deals, internet discounts, Metronet gift card, first month free internet, fiber optic promotions, Metronet promo code",
+    "Metronet promotions, fiber internet deals, internet discounts, no deposit internet, free installation, unlimited data, fiber optic promotions, Metronet promo code",
   authors: [{ name: "Jennifer Martinez", url: "https://www.linkedin.com/in/jennifer-martinez" }],
   alternates: {
     canonical: "https://metroconet.com/promotions",
@@ -72,18 +72,16 @@ export default function Promotions() {
     offers: [
       {
         "@type": "Offer",
-        name: "First Month Free",
+        name: "Free Installation",
         description:
-          "Sign up for any Metronet fiber internet plan and get your first month of service absolutely free!",
+          "Professional fiber internet installation at no cost for new Metronet customers.",
         priceSpecification: {
           "@type": "PriceSpecification",
           price: "0",
           priceCurrency: "USD",
         },
         eligibility: "New residential customers only",
-        availability: "LimitedAvailability",
-        validFrom: "2025-01-01",
-        validThrough: "2025-06-30",
+        availability: "InStock",
       },
     ],
     itemOffered: {

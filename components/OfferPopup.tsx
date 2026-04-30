@@ -75,13 +75,13 @@ export default function OfferPopup() {
         <div className="bg-white bg-opacity-20 rounded-lg p-4 mb-6">
           <ul className="list-none space-y-2 text-white text-lg">
             <li className="flex items-center">
-              <Check className="text-green-400 mr-2" /> First Month Free
+              <Check className="text-green-400 mr-2" /> No Deposit / $0 Due at Signup
             </li>
             <li className="flex items-center">
               <Check className="text-green-400 mr-2" /> Free Installation
             </li>
             <li className="flex items-center">
-              <Check className="text-green-400 mr-2" /> $100 Gift Card on Select Plans
+              <Check className="text-green-400 mr-2" /> Unlimited Data
             </li>
           </ul>
         </div>

@@ -5,9 +5,9 @@ import SupportClient from "./support-client"
 export const metadata: Metadata = {
   title: "Metronet Support & Help Center | Plans Starting at $60",
   description:
-    "Get instant help with Metronet's 24/7 fiber internet support. Find troubleshooting guides, WiFi optimization tips, equipment setup help, and connect with our expert technical team. Plans starting at $60 with first month FREE + $100 Gift Card on select plans.",
+    "Get instant help with Metronet's 24/7 fiber internet support. Find troubleshooting guides, WiFi optimization tips, equipment setup help, and connect with our expert technical team. Plans starting at $60 with free installation and no deposit required.",
   keywords:
-    "Metronet support, fiber internet help, Metronet customer service, internet troubleshooting, WiFi setup help, Metronet technical support, fiber internet problems, Metronet phone number, first month free, $100 gift card",
+    "Metronet support, fiber internet help, Metronet customer service, internet troubleshooting, WiFi setup help, Metronet technical support, fiber internet problems, Metronet phone number, no deposit, free installation, unlimited data",
 }
 
 // Update the main component with improved content and structure
