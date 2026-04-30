@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import ContactForm from "@/components/contact-form"
 
 export const metadata: Metadata = {
-  title: "Contact Metronet | First Month FREE + $100 Gift Card",
+  title: "Contact Metronet | Free Installation | Unlimited Data",
   description:
-    "Need help or have questions? Contact Metronet's expert team 24/7. Get quick responses about our plans starting at $60 with first month FREE + $100 Visa Gift Card on select plans. Learn how to upgrade your internet experience today!",
+    "Need help or have questions? Contact Metronet's expert team 24/7. Get quick responses about our plans starting at $60. Free installation, unlimited data, and no deposit required. Learn how to upgrade your internet experience today!",
 }
 
 export default function Contact() {

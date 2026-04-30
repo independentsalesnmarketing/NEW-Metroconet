@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Careers at Metronet | Join Our Growing Fiber Internet Team",
   description:
-    "Join the team bringing high-speed fiber internet starting at $60 to communities nationwide. Explore career opportunities at Metronet, where we offer first month FREE + $100 Visa Gift Card on select plans to our customers.",
+    "Join the team bringing high-speed fiber internet starting at $60 to communities nationwide. Explore career opportunities at Metronet, where we offer free installation and unlimited data to our customers.",
 }
 
 export default function Careers() {

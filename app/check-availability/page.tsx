@@ -8,11 +8,11 @@ import { states, getAllCitiesWithStates, cityToSlug, stateToSlug } from "@/lib/c
 import { GoogleAnalytics } from "@/components/google-analytics"
 
 export const metadata: Metadata = {
-  title: "Check Metronet Availability | First Month FREE + $100 Gift Card",
+  title: "Check Metronet Availability | Free Installation | Unlimited Data",
   description:
-    "Is Metronet in your neighborhood? Check now and be first in line for blazing-fast fiber internet starting at $60. Get first month FREE + $100 Visa Gift Card on select plans. Enter your address and discover amazing speeds up to 5 Gig!",
+    "Is Metronet in your neighborhood? Check now and be first in line for blazing-fast fiber internet starting at $60. Free installation, unlimited data, and no deposit required. Enter your address and discover amazing speeds up to 5 Gig!",
   keywords:
-    "Metronet availability, fiber internet availability, check Metronet service, Metronet coverage map, fiber optic availability, high-speed internet availability, Metronet service area, first month free, $100 gift card",
+    "Metronet availability, fiber internet availability, check Metronet service, Metronet coverage map, fiber optic availability, high-speed internet availability, Metronet service area, no deposit, free installation, unlimited data",
 }
 
 export default function CheckAvailability() {

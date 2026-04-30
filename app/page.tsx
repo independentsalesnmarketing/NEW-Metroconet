@@ -32,11 +32,11 @@ const SEOFAQ = dynamic(() => import("@/components/seo-faq"), { ssr: true })
 
 // Update the metadata section to include the promotional information
 export const metadata: Metadata = {
-  title: "Metronet: Blazing-Fast Fiber Internet | First Month FREE + $100 Gift Card",
+  title: "Metronet: Blazing-Fast Fiber Internet | Free Installation | Unlimited Data",
   description:
-    "Experience lightning-fast Metronet fiber internet with speeds up to 5 Gig starting at $60. Get first month FREE + $100 Visa Gift Card on select plans. Enjoy unlimited data, no contracts, and exclusive deals. Switch today!",
+    "Experience lightning-fast Metronet fiber internet with speeds up to 5 Gig starting at $60. Free installation, unlimited data, and no deposit required. No contracts. Switch today!",
   keywords:
-    "fiber internet, high-speed internet, Metronet, symmetrical speeds, no data caps, fiber optic, gigabit internet, first month free, $100 gift card",
+    "fiber internet, high-speed internet, Metronet, symmetrical speeds, no data caps, fiber optic, gigabit internet, no deposit, free installation, unlimited data",
   authors: [
     { name: "James Davis", url: "https://www.linkedin.com/in/jamesdavis" },
     { name: "Sarah Mitchell", url: "https://www.linkedin.com/in/sarahmitchell" },

@@ -33,10 +33,11 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-xs sm:text-sm md:text-base text-white/90 mb-8 font-light leading-relaxed">
-              Experience future-ready speeds with up to 5 Gigs of symmetrical fiber internet. Sign up online and get
-              your <span className="text-yellow-300 font-semibold">first month FREE</span>
-              <span className="text-white font-normal mx-1">+</span>
-              <span className="text-yellow-300 font-semibold">NO deposit required</span>
+              Experience future-ready speeds with up to 5 Gigs of symmetrical fiber internet. Sign up online with
+              <span className="text-yellow-300 font-semibold"> $0 due at signup</span>,
+              <span className="text-yellow-300 font-semibold"> free installation</span>
+              <span className="text-white font-normal mx-1">&amp;</span>
+              <span className="text-yellow-300 font-semibold">unlimited data</span>
             </p>
 
             {/* CTA Button */}
@@ -48,7 +49,7 @@ export default function Hero() {
                 hover:scale-105 border border-purple-300/20 w-full md:w-auto text-base tracking-wide"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2 text-sm sm:text-base">
-                  <span>Claim Your FREE First Month</span>
+                  <span>Get Started Today</span>
                   <span className="font-extrabold">&#8594;</span>
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-white/10 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
